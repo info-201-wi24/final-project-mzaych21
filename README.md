@@ -22,8 +22,8 @@ https://fixturedownload.com/results/nhl-2022/pittsburgh-penguins
 After carefully analyzing the data several key takeaways were noted from our project.
 First, although not all 32 teams were analyzed, our comparison of the
 Seattle Kraken and Pittsburgh Penguins makes it evident that traveling less does not always
-lead to a team winning more games. This is seen in our bar graph as the Seattle Kraken had a heavier travel schedule but won more games than the Penguins (46 wins compared to
-40). In addition, We also noticed that there is a heavier concentration of Arenas on the
+lead to a team winning more games. This is seen in our bar graph as the Seattle Kraken had a heavier travel schedule but won more games than the Penguins (47 wins compared to
+41). In addition, We also noticed that there is a heavier concentration of Arenas on the
 east coast. We see that in the Northeast corner of the United States of America, it is
 significantly more dense in terms of Arenas to land, while the west coast is more
 spread out. This is a key reason as to why the travel load for a team like the Pittsburgh
