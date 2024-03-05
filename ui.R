@@ -3,13 +3,18 @@ library(tidyr)
 library(ggplot2)
 library(plotly)
 library(maps)
+library(bslib)
+
+
+my_theme <- bs_theme(version = 4, bootswatch = "cosmo")
+
 
 trav_and_res_df <- read.csv("trav_and_res.csv")
 
 
 ## OVERVIEW TAB INFO
 
-overview_tab <- tabPanel("Overview Tab Title",
+overview_tab <- tabPanel("Introduction and Background",
                          tags$img(src = "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/penguins-seattle-kraken-1638806374.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*", height = "475px"),
                          h1("Introduction"),
                          p("The major question we are answering is how much more does a team from the Western Conference of the National Hockey League travel in comparison to a team from the Eastern Conference. In addition, we are hoping to see if there is a correlation between this travel and in-game success. The data came from Google Maps which showed how far each team traveled in miles from one arena to another and our Team and game results came from fixture downloads."), 
@@ -27,7 +32,12 @@ viz_1_sidebar <- sidebarPanel(
     label = "Select a Team:",
     choices = c("Pittsburgh Penguins", "Seattle Kraken", "Both"),
     selected = "Both"
-  )
+  ),
+  span(textOutput("message1"), style = "color:green"),
+  span(textOutput("message2"), style = "color:gold"),
+  span(textOutput("message3"), style = "color:orange"),
+  span(textOutput("message4"), style = "color:red"),
+  
 )
 
 viz_1_main_panel <- mainPanel(
@@ -35,7 +45,7 @@ viz_1_main_panel <- mainPanel(
   plotlyOutput(outputId = "mapplot")
 )
 
-viz_1_tab <- tabPanel("Viz 1 tab title",
+viz_1_tab <- tabPanel("US Map With Arena and States",
                       sidebarLayout(
                         viz_1_sidebar,
                         viz_1_main_panel
@@ -92,7 +102,7 @@ viz_2_main_panel <- mainPanel(
   plotlyOutput(outputId = "barplot")
 )
 
-viz_2_tab <- tabPanel("Viz 2 tab title",
+viz_2_tab <- tabPanel("Team Wins and Losses",
                       sidebarLayout(
                         viz_2_sidebar,
                         viz_2_main_panel
@@ -146,7 +156,7 @@ viz_3_main_panel <- mainPanel(
   plotlyOutput(outputId = "scatterplot")
 )
 
-viz_3_tab <- tabPanel("Viz 3 tab title",
+viz_3_tab <- tabPanel("Away Game Travel",
                       sidebarLayout(
                         viz_3_sidebar,
                         viz_3_main_panel
@@ -155,7 +165,7 @@ viz_3_tab <- tabPanel("Viz 3 tab title",
 
 ## CONCLUSIONS TAB INFO
 
-conclusion_tab <- tabPanel("Conclusion Tab Title",
+conclusion_tab <- tabPanel("Closing",
                            h1("Conclusion/Summary"),
                            p("After carefully analyzing the data several key takeaways were noted from our project.
 First, although not all 32 teams were analyzed, our comparison of the
@@ -174,10 +184,12 @@ flight path, hotel accommodations, and road paths."), p("Our mileage was calcula
 
 
 
-ui <- navbarPage("Example Project Title",
+ui <- navbarPage("Do Travel and Wins Go Hand and Hand in the NHL",
+                 theme = my_theme,
                  overview_tab,
                  viz_1_tab,
                  viz_2_tab,
                  viz_3_tab,
                  conclusion_tab
+               
 )

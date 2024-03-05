@@ -119,6 +119,11 @@ server <- function(input, output){
                                                           "nevada",
                                                           "washington"))
     
+    output$message1 <- renderText({"Green: Same State"})
+    output$message2 <- renderText({"Yellow: Close"})
+    output$message3 <- renderText({"Orange: Far"})
+    output$message4 <- renderText({"Red: Very Far"})
+    
     
     
     if (input$team_selector1 == "Seattle Kraken") {
