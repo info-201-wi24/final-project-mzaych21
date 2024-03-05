@@ -1,0 +1,13 @@
+name: final-project-mzaych21
+title: final-project-mzaych21
+username: yh254
+account: yh254
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11391063
+bundleId: 8324439
+url: https://yh254.shinyapps.io/final-project-mzaych21/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: DataDocumentation.pdf|final-project-rmdtran/Final Project.R|final-project-rmdtran/PIT.csv|final-project-rmdtran/README.md|final-project-rmdtran/SEA.csv|README.md|Stage2Info201.R|trav_and_res.csv
