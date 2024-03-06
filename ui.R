@@ -37,6 +37,8 @@ viz_1_sidebar <- sidebarPanel(
   span(textOutput("message2"), style = "color:gold"),
   span(textOutput("message3"), style = "color:orange"),
   span(textOutput("message4"), style = "color:red"),
+  h2("Analysis:"),
+  span(textOutput("description"))
   
 )
 
@@ -92,7 +94,10 @@ viz_2_sidebar <- sidebarPanel(
       tags$p("Pitt losses: 50%"),
       tags$p("Out of total 82 games")
     )
-  )
+  ),
+  h2("Analysis:"),
+  span(textOutput("description2"))
+  
 )
 
 
@@ -147,13 +152,17 @@ viz_3_sidebar <- sidebarPanel(
       tags$p("Pitt losses: 57%"),
       tags$p("Out of total 41 away games")
     )
-  )
+  ),
+  h2("Analysis:"),
+  span(textOutput("description3"))
+  
 )
 
 
 viz_3_main_panel <- mainPanel(
   h2("Away Games"),
   plotlyOutput(outputId = "scatterplot")
+  
 )
 
 viz_3_tab <- tabPanel("Away Game Travel",

@@ -5,7 +5,7 @@ account: rmtran
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11391059
-bundleId: 8324831
+bundleId: 8338354
 url: https://rmtran.shinyapps.io/final-project-mzaych21/
 version: 1
 asMultiple: FALSE

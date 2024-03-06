@@ -123,6 +123,11 @@ server <- function(input, output){
     output$message2 <- renderText({"Yellow: Close"})
     output$message3 <- renderText({"Orange: Far"})
     output$message4 <- renderText({"Red: Very Far"})
+    output$description <- renderText({"It's evident that the north-east side of the United States is more densely populated with NHL
+       arenas, proving that it is easier and more manageable for teams to travel on the east coast."})
+    output$description2 <- renderText({"It is clear that the Seattle Kraken won more games than the Pittsburgh Penguins."})
+    output$description3 <- renderText({"Based on the data, the Seattle Kraken traveled much more while still maintaining a better overall 
+      road game win percentage."})
     
     
     
